@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <!-- ============================================================
+       PORTOFOLIO HAVIB SYAHPUTRA
+       Single Page Application – Vanilla HTML/CSS/JS
+       Author: Havib Syahputra | havib0102@gmail.com
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── SEO Meta ── -->
+  <title>Havib Syahputra – Junior Web Developer &amp; UI Designer</title>
+  <meta name="description" content="Portfolio pribadi Havib Syahputra – Junior Web Developer, Laravel Developer, dan UI/UX Enthusiast lulusan SMK Informatika Utama." />
+  <meta name="keywords" content="Havib Syahputra, web developer, Laravel, FlutterFlow, UI designer, portfolio, Depok" />
+  <meta name="author" content="Havib Syahputra" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#090a0f" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Havib Syahputra – Junior Web Developer" />
+  <meta property="og:description" content="Portfolio pribadi Havib Syahputra – Junior Web Developer, Laravel Developer, dan UI/UX Enthusiast." />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta property="og:url" content="" id="og-url" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Havib Syahputra – Junior Web Developer" />
+  <meta name="twitter:description" content="Portfolio pribadi Havib Syahputra – Junior Web Developer & UI Designer." />
+  <meta name="twitter:image" content="assets/img/og-image.jpg" />
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.ico" />
+
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ── Font Awesome ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ── Stylesheet ── -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ── Anti-FOUC: Tema diaplikasikan sebelum render ── -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var preferred = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', preferred);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       TOAST NOTIFICATION CONTAINER
+  ══════════════════════════════════════════════ -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ══════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="navbar__inner container" aria-label="Navigasi utama">
+
+      <!-- Logo -->
+      <a href="#home" class="navbar__logo" aria-label="Havib Syahputra – Kembali ke halaman utama">
+        <span class="navbar__logo-initials">HS</span>
+        <span class="navbar__logo-text">Havib<span class="accent">.</span></span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="navbar__menu" role="list" id="nav-menu">
+        <li><a href="#home"         class="navbar__link" data-page="home"         aria-label="Halaman Beranda">Beranda</a></li>
+        <li><a href="#projects"     class="navbar__link" data-page="projects"     aria-label="Halaman Proyek">Proyek</a></li>
+        <li><a href="#certificates" class="navbar__link" data-page="certificates" aria-label="Halaman Sertifikat">Sertifikat</a></li>
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="navbar__controls">
+        <button class="navbar__theme-toggle" id="theme-toggle" aria-label="Ganti tema gelap/terang" title="Ganti Tema">
+          <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+        </button>
+        <button class="navbar__hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN CONTENT – SPA VIEWS
+  ══════════════════════════════════════════════ -->
+  <main id="main-content" role="main">
+
+    <!-- ─────────────────────────────────────
+         PAGE: HOME
+    ───────────────────────────────────── -->
+    <section id="page-home" class="page" aria-label="Halaman Beranda">
+
+      <!-- HERO -->
+      <section class="hero" id="home" aria-label="Hero – Perkenalan">
+        <!-- Floating blob backgrounds -->
+        <div class="hero__blobs" aria-hidden="true">
+          <div class="blob blob--1"></div>
+          <div class="blob blob--2"></div>
+          <div class="blob blob--3"></div>
+        </div>
+
+        <div class="container hero__inner">
+          <!-- Text Side -->
+          <div class="hero__content" data-animate="fade-up">
+            <!-- Open to Work Badge -->
+            <div class="hero__badge" id="open-to-work-badge" aria-label="Status: Open to Work">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span class="badge__text">Open to Work</span>
+            </div>
+
+            <p class="hero__greeting">Halo, saya</p>
+            <h1 class="hero__name" id="hero-name">Havib Syahputra</h1>
+
+            <!-- Typewriter -->
+            <div class="hero__typewriter" aria-label="Peran profesional">
+              <span class="typewriter__static">Saya seorang </span>
+              <span class="typewriter__text" id="typewriter-text" aria-live="polite"></span>
+              <span class="typewriter__cursor" aria-hidden="true">|</span>
+            </div>
+
+            <p class="hero__location">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span id="hero-location">Depok, Jawa Barat</span>
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero__actions">
+              <a href="#projects" class="btn btn--primary" id="btn-lihat-proyek" aria-label="Lihat portofolio proyek">
+                <i class="fas fa-rocket" aria-hidden="true"></i>
+                Lihat Proyek
+              </a>
+              <button class="btn btn--outline" id="btn-download-cv" aria-label="Unduh Curriculum Vitae">
+                <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+                Download CV
+              </button>
+              <a href="#contact" class="btn btn--ghost" aria-label="Hubungi saya">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                Hubungi Saya
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero__socials" id="hero-socials" aria-label="Tautan media sosial"></div>
+          </div>
+
+          <!-- Photo Side -->
+          <div class="hero__photo-wrapper" data-animate="fade-left">
+            <div class="hero__photo-glow" aria-hidden="true"></div>
+            <div class="hero__photo-blob" aria-hidden="true"></div>
+            <div class="hero__photo" id="hero-photo" aria-label="Foto profil Havib Syahputra">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero__scroll" aria-hidden="true">
+          <div class="scroll-indicator">
+            <div class="scroll-indicator__dot"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TENTANG SAYA -->
+      <section class="about section" id="about" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="section__header" data-animate="fade-up">
+            <span class="section__label">Tentang</span>
+            <h2 class="section__title" id="about-heading">Tentang <span class="accent">Saya</span></h2>
+            <p class="section__subtitle">Kenali saya lebih dekat</p>
+          </div>
+
+          <div class="about__inner">
+            <!-- Photo -->
+            <div class="about__photo-side" data-animate="fade-right">
+              <div class="about__photo-frame" id="about-photo" aria-label="Foto Havib Syahputra"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="about__content-side" data-animate="fade-left">
+              <p class="about__bio" id="about-bio">
+                Lulusan SMK Informatika Utama jurusan Rekayasa Perangkat Lunak yang disiplin, adaptif, dan memiliki semangat belajar tinggi. Menguasai pemrograman web (PHP, Laravel, HTML, CSS), FlutterFlow, serta desain grafis (Figma, Photoshop, Canva, CorelDraw). Aktif berorganisasi dan berpengalaman memimpin sehingga terlatih dalam komunikasi, koordinasi, dan kerja sama tim.
+              </p>
+
+              <div class="about__info-grid">
+                <div class="about__info-item">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <div>
+                    <span class="about__info-label">Pendidikan</span>
+                    <span class="about__info-value">SMK Rekayasa Perangkat Lunak</span>
+                  </div>
+                </div>
+                <div class="about__info-item">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <div>
+                    <span class="about__info-label">Lokasi</span>
+                    <span class="about__info-value">Depok, Jawa Barat</span>
+                  </div>
+                </div>
+                <div class="about__info-item">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <div>
+                    <span class="about__info-label">Email</span>
+                    <span class="about__info-value">havib0102@gmail.com</span>
+                  </div>
+                </div>
+                <div class="about__info-item">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                  <div>
+                    <span class="about__info-label">Telepon</span>
+                    <span class="about__info-value">+62-878-1013-9688</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stats -->
+              <div class="about__stats">
+                <div class="stat-card" data-animate="fade-up" data-delay="0">
+                  <span class="stat-card__number" data-count="6" aria-label="6 proyek">0</span>
+                  <span class="stat-card__label">Proyek</span>
+                </div>
+                <div class="stat-card" data-animate="fade-up" data-delay="100">
+                  <span class="stat-card__number" data-count="6" aria-label="6 sertifikat">0</span>
+                  <span class="stat-card__label">Sertifikat</span>
+                </div>
+                <div class="stat-card" data-animate="fade-up" data-delay="200">
+                  <span class="stat-card__number" data-count="2" aria-label="2 tahun">0</span>
+                  <span class="stat-card__label">Thn Organisasi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="skills section" id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+          <div class="section__header" data-animate="fade-up">
+            <span class="section__label">Kemampuan</span>
+            <h2 class="section__title" id="skills-heading">Tech <span class="accent">Stack</span></h2>
+            <p class="section__subtitle">Teknologi dan alat yang saya kuasai</p>
+          </div>
+          <div class="skills__grid" id="skills-grid" aria-label="Daftar keahlian">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- PENGALAMAN / TIMELINE -->
+      <section class="timeline-section section" id="experience" aria-labelledby="experience-heading">
+        <div class="container">
+          <div class="section__header" data-animate="fade-up">
+            <span class="section__label">Perjalanan</span>
+            <h2 class="section__title" id="experience-heading">Pengalaman &amp; <span class="accent">Riwayat</span></h2>
+            <p class="section__subtitle">Pendidikan, karir, dan keterlibatan saya</p>
+          </div>
+
+          <!-- Tab filter -->
+          <div class="timeline-tabs" role="tablist" aria-label="Filter timeline">
+            <button class="timeline-tab active" role="tab" aria-selected="true"  data-filter="all"          id="tab-all">Semua</button>
+            <button class="timeline-tab"        role="tab" aria-selected="false" data-filter="education"    id="tab-edu">Pendidikan</button>
+            <button class="timeline-tab"        role="tab" aria-selected="false" data-filter="work"         id="tab-work">Kerja & Magang</button>
+            <button class="timeline-tab"        role="tab" aria-selected="false" data-filter="organization" id="tab-org">Organisasi</button>
+          </div>
+
+          <div class="timeline" id="timeline-container" aria-label="Garis waktu pengalaman">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT CTA -->
+      <section class="contact section" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="contact__card glass" data-animate="fade-up">
+            <div class="contact__content">
+              <span class="section__label">Kontak</span>
+              <h2 class="contact__title" id="contact-heading">Mari <span class="accent">Berkolaborasi</span></h2>
+              <p class="contact__desc">Saya terbuka untuk peluang kerja, proyek freelance, atau sekadar berbagi ide. Jangan ragu untuk menghubungi saya!</p>
+              <div class="contact__actions">
+                <a href="mailto:havib0102@gmail.com" class="btn btn--primary" aria-label="Kirim email ke Havib">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  Kirim Email
+                </a>
+                <a href="https://wa.me/6287810139688" target="_blank" rel="noopener noreferrer" class="btn btn--outline" aria-label="Hubungi via WhatsApp">
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+            <div class="contact__illustration" aria-hidden="true">
+              <i class="fas fa-paper-plane contact__icon"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section><!-- /page-home -->
+
+    <!-- ─────────────────────────────────────
+         PAGE: PROJECTS
+    ───────────────────────────────────── -->
+    <section id="page-projects" class="page hidden" aria-label="Halaman Proyek">
+      <div class="page-hero">
+        <div class="container">
+          <h1 class="page-hero__title" data-animate="fade-up">Portofolio <span class="accent">Proyek</span></h1>
+          <p class="page-hero__subtitle" data-animate="fade-up" data-delay="100">Kumpulan karya dan proyek yang telah saya kerjakan</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Filter & Search -->
+        <div class="projects__controls" data-animate="fade-up">
+          <div class="filter-tabs" role="tablist" aria-label="Filter kategori proyek">
+            <button class="filter-tab active" role="tab" data-filter="all"       aria-label="Tampilkan semua proyek">Semua</button>
+            <button class="filter-tab"        role="tab" data-filter="Web"       aria-label="Filter proyek Web">Web</button>
+            <button class="filter-tab"        role="tab" data-filter="Mobile"    aria-label="Filter proyek Mobile">Mobile</button>
+            <button class="filter-tab"        role="tab" data-filter="WordPress" aria-label="Filter proyek WordPress">WordPress</button>
+          </div>
+          <div class="search-box">
+            <i class="fas fa-search search-box__icon" aria-hidden="true"></i>
+            <input type="search" class="search-box__input" id="project-search" placeholder="Cari proyek..." aria-label="Cari proyek" />
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects__grid" id="projects-grid" aria-label="Daftar proyek">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state hidden" id="projects-empty">
+          <i class="fas fa-folder-open empty-state__icon" aria-hidden="true"></i>
+          <p class="empty-state__text">Tidak ada proyek yang ditemukan</p>
+        </div>
+      </div>
+    </section><!-- /page-projects -->
+
+    <!-- ─────────────────────────────────────
+         PAGE: CERTIFICATES
+    ───────────────────────────────────── -->
+    <section id="page-certificates" class="page hidden" aria-label="Halaman Sertifikat">
+      <div class="page-hero">
+        <div class="container">
+          <h1 class="page-hero__title" data-animate="fade-up">Prestasi &amp; <span class="accent">Sertifikat</span></h1>
+          <p class="page-hero__subtitle" data-animate="fade-up" data-delay="100">Pengakuan kompetensi dan pencapaian saya</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Filter -->
+        <div class="filter-tabs" role="tablist" aria-label="Filter kategori sertifikat" data-animate="fade-up">
+          <button class="filter-tab active" role="tab" data-filter="all"         aria-label="Semua sertifikat">Semua</button>
+          <button class="filter-tab"        role="tab" data-filter="Kompetensi"  aria-label="Sertifikat kompetensi">Kompetensi</button>
+          <button class="filter-tab"        role="tab" data-filter="Prestasi"    aria-label="Penghargaan prestasi">Prestasi</button>
+          <button class="filter-tab"        role="tab" data-filter="Bahasa"      aria-label="Sertifikat bahasa">Bahasa</button>
+        </div>
+
+        <!-- Certificates Grid -->
+        <div class="certificates__grid" id="certificates-grid" aria-label="Daftar sertifikat">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state hidden" id="cert-empty">
+          <i class="fas fa-certificate empty-state__icon" aria-hidden="true"></i>
+          <p class="empty-state__text">Tidak ada sertifikat yang ditemukan</p>
+        </div>
+      </div>
+    </section><!-- /page-certificates -->
+
+    <!-- ─────────────────────────────────────
+         PAGE: ADMIN (Login + Dashboard)
+    ───────────────────────────────────── -->
+    <section id="page-admin" class="page hidden" aria-label="Halaman Admin">
+      <!-- Login View -->
+      <div id="admin-login-view" class="admin-login">
+        <div class="admin-login__card glass" data-animate="fade-up">
+          <div class="admin-login__header">
+            <div class="admin-login__icon">
+              <i class="fas fa-shield-halved" aria-hidden="true"></i>
+            </div>
+            <h1 class="admin-login__title">Admin Panel</h1>
+            <p class="admin-login__subtitle">Masuk untuk mengelola konten portofolio</p>
+            <p class="admin-login__warning">
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              <small>Autentikasi ini berjalan di sisi klien (localStorage). Tidak untuk penggunaan produksi.</small>
+            </p>
+          </div>
+
+          <form class="admin-login__form" id="login-form" novalidate aria-label="Form login admin">
+            <div class="form-group">
+              <label class="form-label" for="login-username">Username</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                <input type="text" class="form-input" id="login-username" name="username" placeholder="Masukkan username" autocomplete="username" required aria-required="true" aria-describedby="login-error" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="login-password">Password</label>
+              <div class="input-wrapper">
+                <i class="fas fa-lock input-icon" aria-hidden="true"></i>
+                <input type="password" class="form-input" id="login-password" name="password" placeholder="Masukkan password" autocomplete="current-password" required aria-required="true" />
+                <button type="button" class="input-toggle" id="toggle-password" aria-label="Tampilkan/sembunyikan password">
+                  <i class="fas fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-error hidden" id="login-error" role="alert" aria-live="assertive"></div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="login-submit" aria-label="Masuk ke panel admin">
+              <i class="fas fa-right-to-bracket" aria-hidden="true"></i>
+              <span id="login-btn-text">Masuk</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Dashboard View -->
+      <div id="admin-dashboard-view" class="admin-dashboard hidden">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="admin-sidebar" aria-label="Menu dashboard admin">
+          <div class="admin-sidebar__header">
+            <div class="admin-sidebar__logo">
+              <span class="navbar__logo-initials">HS</span>
+              <span>Admin Panel</span>
+            </div>
+            <button class="admin-sidebar__close" id="sidebar-close" aria-label="Tutup sidebar">
+              <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <nav class="admin-sidebar__nav" aria-label="Menu navigasi admin">
+            <button class="admin-nav__item active" data-panel="profile"      aria-label="Kelola profil">
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
+              <span>Profil</span>
+            </button>
+            <button class="admin-nav__item" data-panel="projects"    aria-label="Kelola proyek">
+              <i class="fas fa-folder" aria-hidden="true"></i>
+              <span>Proyek</span>
+            </button>
+            <button class="admin-nav__item" data-panel="certificates" aria-label="Kelola sertifikat">
+              <i class="fas fa-certificate" aria-hidden="true"></i>
+              <span>Sertifikat</span>
+            </button>
+            <button class="admin-nav__item" data-panel="settings"    aria-label="Pengaturan">
+              <i class="fas fa-gear" aria-hidden="true"></i>
+              <span>Pengaturan</span>
+            </button>
+          </nav>
+
+          <button class="admin-sidebar__logout" id="logout-btn" aria-label="Keluar dari panel admin">
+            <i class="fas fa-right-from-bracket" aria-hidden="true"></i>
+            <span>Logout</span>
+          </button>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <div class="admin-content" id="admin-content">
+          <!-- Mobile header -->
+          <header class="admin-topbar">
+            <button class="admin-topbar__menu" id="sidebar-toggle" aria-label="Buka/tutup sidebar">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <span class="admin-topbar__title" id="panel-title">Profil</span>
+            <div class="admin-topbar__actions">
+              <a href="#home" class="btn btn--ghost btn--sm" aria-label="Kembali ke halaman publik">
+                <i class="fas fa-eye" aria-hidden="true"></i>
+                <span class="hide-mobile">Lihat Site</span>
+              </a>
+            </div>
+          </header>
+
+          <!-- Panels rendered by admin.js -->
+          <div class="admin-panels" id="admin-panels">
+            <!-- Profile Panel -->
+            <div class="admin-panel active" id="panel-profile" aria-label="Panel profil"></div>
+            <!-- Projects Panel -->
+            <div class="admin-panel hidden" id="panel-projects" aria-label="Panel proyek"></div>
+            <!-- Certificates Panel -->
+            <div class="admin-panel hidden" id="panel-certificates" aria-label="Panel sertifikat"></div>
+            <!-- Settings Panel -->
+            <div class="admin-panel hidden" id="panel-settings" aria-label="Panel pengaturan"></div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /page-admin -->
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <p class="footer__copy">
+          &copy; <span id="footer-year"></span> <strong>Havib Syahputra</strong>. Dibuat dengan
+          <i class="fas fa-heart footer__heart" aria-label="cinta" aria-hidden="true"></i> di Depok.
+        </p>
+      </div>
+      <div class="footer__socials" id="footer-socials" aria-label="Tautan media sosial footer"></div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════
+       MODAL – Project Detail
+  ══════════════════════════════════════════════ -->
+  <div class="modal-overlay hidden" id="project-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" aria-hidden="true">
+    <div class="modal glass">
+      <button class="modal__close" id="project-modal-close" aria-label="Tutup modal proyek">
+        <i class="fas fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal__content" id="project-modal-content">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       MODAL – Certificate Lightbox
+  ══════════════════════════════════════════════ -->
+  <div class="modal-overlay hidden" id="cert-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title" aria-hidden="true">
+    <div class="modal modal--cert glass">
+      <button class="modal__close" id="cert-modal-close" aria-label="Tutup lightbox sertifikat">
+        <i class="fas fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal__content" id="cert-modal-content">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="modal__nav">
+        <button class="modal__nav-btn" id="cert-prev" aria-label="Sertifikat sebelumnya">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <span class="modal__nav-counter" id="cert-counter" aria-live="polite">1 / 1</span>
+        <button class="modal__nav-btn" id="cert-next" aria-label="Sertifikat berikutnya">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       BACK TO TOP
+  ══════════════════════════════════════════════ -->
+  <button class="back-to-top hidden" id="back-to-top" aria-label="Kembali ke atas halaman" title="Kembali ke atas">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ══════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════ -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+
+</body>
+</html>

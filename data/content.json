@@ -1,0 +1,280 @@
+{
+  "profile": {
+    "name": "Havib Syahputra",
+    "headline": "Junior Web Developer | Software Engineering Graduate | UI Designer",
+    "location": "Depok, Jawa Barat",
+    "email": "havib0102@gmail.com",
+    "phone": "+62-878-1013-9688",
+    "linkedin": "https://linkedin.com/in/havib-syahputra",
+    "github": "https://github.com/havib01",
+    "whatsapp": "https://wa.me/6287810139688",
+    "instagram": "",
+    "openToWork": true,
+    "bio": "Lulusan SMK Informatika Utama jurusan Rekayasa Perangkat Lunak yang disiplin, adaptif, dan memiliki semangat belajar tinggi. Menguasai pemrograman web (PHP, Laravel, HTML, CSS), FlutterFlow, serta desain grafis (Figma, Photoshop, Canva, CorelDraw). Aktif berorganisasi dan berpengalaman memimpin sehingga terlatih dalam komunikasi, koordinasi, dan kerja sama tim.",
+    "typewriterTexts": [
+      "Junior Web Developer",
+      "Laravel Developer",
+      "UI/UX Enthusiast",
+      "Mobile App Developer"
+    ]
+  },
+  "projects": [
+    {
+      "id": "ss-mart-ecommerce",
+      "title": "Aplikasi E-Commerce SS-MART",
+      "year": "2026",
+      "category": "Web",
+      "technologies": [
+        "Laravel 10",
+        "MySQL",
+        "Bootstrap",
+        "PHP"
+      ],
+      "description": "Platform e-commerce lengkap untuk toko SS-MART yang mencakup manajemen produk, keranjang belanja, proses checkout, dan sistem pembayaran berbasis web.",
+      "image": "assets/projects/ss-mart-ecommerce.jpg",
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "id": "ss-mart-kasir",
+      "title": "Aplikasi Kasir SS-MART",
+      "year": "2025",
+      "category": "Web",
+      "technologies": [
+        "Laravel 10",
+        "MySQL",
+        "JavaScript",
+        "PHP"
+      ],
+      "description": "Sistem kasir berbasis web untuk memudahkan proses transaksi penjualan di toko SS-MART, dilengkapi laporan penjualan harian dan manajemen stok.",
+      "image": "assets/projects/ss-mart-kasir.jpg",
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "id": "inventory",
+      "title": "Aplikasi Inventory Barang",
+      "year": "2025",
+      "category": "Web",
+      "technologies": [
+        "Laravel 8",
+        "MySQL",
+        "Blade",
+        "PHP"
+      ],
+      "description": "Sistem manajemen inventaris barang berbasis web untuk memantau stok masuk/keluar, kategori produk, dan laporan persediaan secara real-time.",
+      "image": "assets/projects/inventory.jpg",
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "id": "flashcard-anatomi",
+      "title": "Aplikasi Android Flashcard Anatomi",
+      "year": "2025",
+      "category": "Mobile",
+      "technologies": [
+        "FlutterFlow",
+        "Firebase",
+        "Dart"
+      ],
+      "description": "Aplikasi Android edukatif berupa flashcard interaktif untuk mempelajari anatomi tubuh manusia, dibangun dengan FlutterFlow dan Firebase sebagai backend.",
+      "image": "assets/projects/flashcard-anatomi.jpg",
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "id": "company-sekolah",
+      "title": "Website Company Profile Sekolah",
+      "year": "2025",
+      "category": "WordPress",
+      "technologies": [
+        "WordPress",
+        "Elementor",
+        "PHP",
+        "CSS"
+      ],
+      "description": "Website company profile resmi sekolah yang menampilkan informasi akademik, galeri kegiatan, berita terkini, dan profil tenaga pengajar.",
+      "image": "assets/projects/company-sekolah.jpg",
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "id": "company-salon",
+      "title": "Website Company Profile Beauty Salon",
+      "year": "2025",
+      "category": "WordPress",
+      "technologies": [
+        "WordPress",
+        "Elementor",
+        "CSS"
+      ],
+      "description": "Website profil perusahaan untuk salon kecantikan yang menampilkan layanan, galeri, harga, dan informasi kontak dengan desain elegan dan responsif.",
+      "image": "assets/projects/company-salon.jpg",
+      "demo": "",
+      "repo": ""
+    }
+  ],
+  "certificates": [
+    {
+      "id": "olympiad-undip",
+      "title": "Juara 1 Agama Islam – Brilliant Academic Olympiad UNDIP",
+      "issuer": "Universitas Diponegoro (UNDIP)",
+      "year": "2025",
+      "category": "Prestasi",
+      "image": "assets/certificates/olympiad-undip.jpg"
+    },
+    {
+      "id": "bnsp-web-pratama",
+      "title": "Pengembang Web Pratama",
+      "issuer": "LSP TIK Global (BNSP)",
+      "year": "2026",
+      "category": "Kompetensi",
+      "image": "assets/certificates/bnsp-web-pratama.jpg"
+    },
+    {
+      "id": "revou-coding-camp",
+      "title": "Coding Camp Software Engineering",
+      "issuer": "ReVoU Career Kickstart",
+      "year": "2026",
+      "category": "Kompetensi",
+      "image": "assets/certificates/revou-coding-camp.jpg"
+    },
+    {
+      "id": "junior-web-dev-vnue",
+      "title": "Junior Web Developer",
+      "issuer": "PT Vnue Teknologi Indonesia",
+      "year": "2025",
+      "category": "Kompetensi",
+      "image": "assets/certificates/junior-web-dev-vnue.jpg"
+    },
+    {
+      "id": "toeic",
+      "title": "TOEIC Certificate",
+      "issuer": "ETS",
+      "year": "2025",
+      "category": "Bahasa",
+      "image": "assets/certificates/toeic.jpg"
+    },
+    {
+      "id": "toefl",
+      "title": "TOEFL Certificate",
+      "issuer": "ETS",
+      "year": "2025",
+      "category": "Bahasa",
+      "image": "assets/certificates/toefl.jpg"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Web Development",
+      "icon": "fa-solid fa-code",
+      "items": [
+        "Laravel",
+        "PHP",
+        "HTML",
+        "CSS",
+        "WordPress"
+      ]
+    },
+    {
+      "category": "Mobile & Backend",
+      "icon": "fa-solid fa-mobile-screen",
+      "items": [
+        "FlutterFlow",
+        "Firebase",
+        "MySQL"
+      ]
+    },
+    {
+      "category": "Desain",
+      "icon": "fa-solid fa-palette",
+      "items": [
+        "Figma",
+        "Canva",
+        "Photoshop",
+        "CorelDraw",
+        "CapCut"
+      ]
+    },
+    {
+      "category": "Office & Produktivitas",
+      "icon": "fa-solid fa-briefcase",
+      "items": [
+        "Microsoft Word",
+        "Microsoft PowerPoint",
+        "Microsoft Excel"
+      ]
+    },
+    {
+      "category": "Soft Skills",
+      "icon": "fa-solid fa-people-group",
+      "items": [
+        "Komunikasi",
+        "Kerja Tim",
+        "Problem Solving",
+        "Manajemen Waktu",
+        "Tanggung Jawab",
+        "Adaptif",
+        "Proaktif"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "type": "education",
+      "title": "SMK Informatika Utama",
+      "subtitle": "Rekayasa Perangkat Lunak",
+      "period": "2023 – 2026",
+      "desc": "Mengambil jurusan Rekayasa Perangkat Lunak dengan fokus pada pengembangan web dan mobile, serta aktif dalam berbagai kegiatan organisasi sekolah."
+    },
+    {
+      "type": "education",
+      "title": "SMP Plus Sirajussa'adah",
+      "subtitle": "Sekolah Menengah Pertama",
+      "period": "2020 – 2023",
+      "desc": "Menyelesaikan pendidikan tingkat SMP dan membangun fondasi akademik yang kuat."
+    },
+    {
+      "type": "work",
+      "title": "Junior Web Developer (Magang)",
+      "subtitle": "PT Idemu Sistem Sinergi Sistemkode",
+      "period": "Jan – Mar 2025",
+      "desc": "Mengembangkan aplikasi Android Flashcard Anatomi Tubuh menggunakan FlutterFlow dan Firebase. Berperan aktif dalam tim desain untuk menciptakan antarmuka UI/UX yang modern dan intuitif."
+    },
+    {
+      "type": "work",
+      "title": "Waiters / Server",
+      "subtitle": "Prompt Space, Kota Wisata Cibubur",
+      "period": "Jul – Agu 2025",
+      "desc": "Melayani pelanggan dengan standar pelayanan tinggi, berkoordinasi dengan tim dapur, dan bekerja secara efektif di bawah tekanan pada jam-jam sibuk."
+    },
+    {
+      "type": "organization",
+      "title": "Div. Kerohanian OSIS",
+      "subtitle": "SMK Informatika Utama",
+      "period": "2023 – 2025",
+      "desc": "Mengelola dan menjalankan program kerja bidang kerohanian dengan ketepatan alokasi dana 100%, serta menggerakkan kegiatan Sholat Dhuha berjamaah rutin."
+    },
+    {
+      "type": "organization",
+      "title": "Pradana Putra – Dewan Ambalan Pramuka",
+      "subtitle": "SMK Informatika Utama",
+      "period": "2023 – 2025",
+      "desc": "Memimpin dan mengoordinasikan seluruh program kerja Pramuka, pembagian tugas antar anggota, dan pengambilan keputusan strategis dalam kegiatan kepramukaan."
+    },
+    {
+      "type": "organization",
+      "title": "Master of Ceremony – Employee Volunteering Program",
+      "subtitle": "PT PLN (Persero)",
+      "period": "Juni 2025",
+      "desc": "Bertugas sebagai MC dan perwakilan siswa/OSIS dalam program Employee Volunteering bersama karyawan PLN Pusat."
+    },
+    {
+      "type": "organization",
+      "title": "Volunteer – Bakti Sosial Khitanan Massal",
+      "subtitle": "YBM PLN",
+      "period": "Des 2024 & Jul 2025",
+      "desc": "Berpartisipasi aktif sebagai relawan dalam kegiatan bakti sosial khitanan massal yang diselenggarakan oleh Yayasan Baitul Maal PLN."
+    }
+  ]
+}
